@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaciones de Movimiento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Seleccione el tipo de movimiento</h1>
+        <div class="options">
+            <button onclick="showCalculationOptions('MRU')">MRU</button>
+            <button onclick="showCalculationOptions('MRUV')">MRUV</button>
+            <button onclick="showCalculationOptions('UniformCircular')">Movimiento Circular Uniforme</button>
+            <button onclick="showCalculationOptions('AcceleratedCircular')">Movimiento Circular Uniformemente Acelerado</button>
+            <button onclick="showCalculationOptions('SimpleHarmonic')">Movimiento Armónico Simple</button>
+            <button onclick="showCalculationOptions('Parabolic')">Movimiento Parabólico</button>
+        </div>
+        <div id="calculation-options" class="calculation-options"></div>
+        <div id="input-fields" class="input-fields"></div>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
