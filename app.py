@@ -2,7 +2,9 @@ from flask import Flask, render_template
 from movements import mru
 from movements import mcu
 from movements import mas
-#(el resto)from movements import mruv, accelerated_circular, parabolic
+from movements import mruv
+from movements import mcua
+from movements import mp
 
 app = Flask(__name__)
 
@@ -12,7 +14,9 @@ app.register_blueprint(mcu.mcu_bp, url_prefix='/mcu')
 #app.register_blueprint(mcua.mcua_bp, url_prefix='/mcua')
 app.register_blueprint(mas.mas_bp, url_prefix='/mas')
 #app.register_blueprint(mp.mp_bp, url_prefix='/mp')
-
+app.register_blueprint(mruv.mruv_bp, url_prefix='/mruv')
+app.register_blueprint(mcua.mcua_bp, url_prefix='/mcua')
+app.register_blueprint(mp.mp_bp, url_prefix='/mp')
 @app.route('/')
 def index():
     return render_template('index.html')
