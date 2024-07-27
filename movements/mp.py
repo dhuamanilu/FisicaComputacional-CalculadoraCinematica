@@ -52,7 +52,7 @@ def calculate_mp():
             vi = float(data['vi'])
             angulo = float(data['angulo'])
             resultado, unidad = mp.tiempo_vuelo(vi, angulo)
-        return jsonify({"resultado": resultado, "unidad": unidad})
+        return jsonify({'resultado': f"{resultado} {unidad}"})
     except ValueError:
         return jsonify({"error": "Ingrese valores numéricos válidos"}), 400
     except NegativeValueError as e:

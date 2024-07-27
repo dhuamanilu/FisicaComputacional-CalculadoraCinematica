@@ -5,8 +5,11 @@ from movements import mas
 from movements import mruv
 from movements import mcua
 from movements import mp
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 
 app.register_blueprint(mru.mru_bp, url_prefix='/mru')
 #app.register_blueprint(mruv.mruv_bp, url_prefix='/mruv')
@@ -22,4 +25,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)

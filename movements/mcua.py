@@ -53,7 +53,7 @@ def calculate_mcua():
             vf = float(data['vf'])
             t = float(data['t'])
             resultado, unidad = mcua.aceleracion_angular(vi, vf, t)
-        return jsonify({"resultado": resultado, "unidad": unidad})
+        return jsonify({'resultado': f"{resultado} {unidad}"})
     except ValueError:
         return jsonify({"error": "Ingrese valores numéricos válidos"}), 400
     except NegativeValueError as e:
