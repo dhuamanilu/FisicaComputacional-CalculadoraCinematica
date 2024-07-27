@@ -1,16 +1,17 @@
 from flask import Flask, render_template
 from movements import mru
-
-#(el resto)from movements import mruv, circular, accelerated_circular, simple_harmonic, parabolic
+from movements import mcu
+from movements import mas
+#(el resto)from movements import mruv, accelerated_circular, parabolic
 
 app = Flask(__name__)
 
 app.register_blueprint(mru.mru_bp, url_prefix='/mru')
 #app.register_blueprint(mruv.mruv_bp, url_prefix='/mruv')
-#app.register_blueprint(circular.circular_bp, url_prefix='/circular')
-#app.register_blueprint(accelerated_circular.accelerated_circular_bp, url_prefix='/accelerated_circular')
-#app.register_blueprint(simple_harmonic.simple_harmonic_bp, url_prefix='/simple_harmonic')
-#app.register_blueprint(parabolic.parabolic_bp, url_prefix='/parabolic')
+app.register_blueprint(mcu.mcu_bp, url_prefix='/mcu')
+#app.register_blueprint(mcua.mcua_bp, url_prefix='/mcua')
+app.register_blueprint(mas.mas_bp, url_prefix='/mas')
+#app.register_blueprint(mp.mp_bp, url_prefix='/mp')
 
 @app.route('/')
 def index():
