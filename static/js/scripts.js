@@ -40,23 +40,23 @@ function showInputFields(type, calculation) {
     if (type === 'MRU') {
         if (calculation === 'distancia') {
             fieldsHtml = `
-                <h2>Calcular Distancia (Δx)</h2>
-                <input type="number" id="v" placeholder="Velocidad (v)">
-                <input type="number" id="t" placeholder="Tiempo (t)">
+                <h2>Calcular Distancia (Δx) en metros</h2>
+                <input type="number" id="v" placeholder="Velocidad (v) en mtr/seg">
+                <input type="number" id="t" placeholder="Tiempo (t) en seg">
                 <button onclick="calculate('MRU', 'distancia')">Calcular</button>
             `;
         } else if (calculation === 'velocidad') {
             fieldsHtml = `
                 <h2>Calcular Velocidad (v)</h2>
-                <input type="number" id="d" placeholder="Distancia (d)">
-                <input type="number" id="t" placeholder="Tiempo (t)">
+                <input type="number" id="d" placeholder="Distancia (d) en mtr">
+                <input type="number" id="t" placeholder="Tiempo (t) en seg">
                 <button onclick="calculate('MRU', 'velocidad')">Calcular</button>
             `;
         } else if (calculation === 'tiempo') {
             fieldsHtml = `
                 <h2>Calcular Tiempo (Δt)</h2>
-                <input type="number" id="d" placeholder="Distancia (d)">
-                <input type="number" id="v" placeholder="Velocidad (v)">
+                <input type="number" id="d" placeholder="Distancia (d) en mtr">
+                <input type="number" id="v" placeholder="Velocidad (v) en mtr/seg">
                 <button onclick="calculate('MRU', 'tiempo')">Calcular</button>
             `;
         }
@@ -66,22 +66,22 @@ function showInputFields(type, calculation) {
         if (calculation === 'radio') {
             fieldsHtml = `
                 <h2>Calcular Radio (r)</h2>
-                <input type="number" id="v" placeholder="Velocidad (v)">
-                <input type="number" id="f" placeholder="Frecuencia (f)">
+                <input type="number" id="v" placeholder="Velocidad (v) en mtr/seg">
+                <input type="number" id="f" placeholder="Frecuencia (f) en Hz">
                 <button onclick="calculate('MCU', 'radio')">Calcular</button>
             `;
         } else if (calculation === 'frecuencia') {
             fieldsHtml = `
                 <h2>Calcular Frecuencia (f)</h2>
-                <input type="number" id="v" placeholder="Velocidad (v)">
-                <input type="number" id="r" placeholder="Radio (r)">
+                <input type="number" id="v" placeholder="Velocidad (v) en mtr/seg">
+                <input type="number" id="r" placeholder="Radio (r) en mtr">
                 <button onclick="calculate('MCU', 'frecuencia')">Calcular</button>
             `;
         } else if (calculation === 'velocidad') {
             fieldsHtml = `
                 <h2>Calcular Velocidad (v)</h2>
-                <input type="number" id="r" placeholder="Radio (r)">
-                <input type="number" id="f" placeholder="Frecuencia (f)">
+                <input type="number" id="r" placeholder="Radio (r)en mtr">
+                <input type="number" id="f" placeholder="Frecuencia (f) en Hz">
                 <button onclick="calculate('MCU', 'velocidad')">Calcular</button>
             `;
         }
@@ -89,19 +89,19 @@ function showInputFields(type, calculation) {
         if (calculation === 'frecuencia') {
             fieldsHtml = `
                 <h2>Calcular Frecuencia (f)</h2>
-                <input type="number" id="w" placeholder="Velocidad Angular (ω)">
+                <input type="number" id="w" placeholder="Velocidad Angular (ω) en rad/seg">
                 <button onclick="calculate('MAS', 'frecuencia')">Calcular</button>
             `;
         } else if (calculation === 'periodo') {
             fieldsHtml = `
                 <h2>Calcular Período (T)</h2>
-                <input type="number" id="f" placeholder="Frecuencia (f)">
+                <input type="number" id="f" placeholder="Frecuencia (f) en Hz">
                 <button onclick="calculate('MAS', 'periodo')">Calcular</button>
             `;
         } else if (calculation === 'angulo_velocidad') {
             fieldsHtml = `
                 <h2>Calcular Velocidad Angular (ω)</h2>
-                <input type="number" id="f" placeholder="Frecuencia (f)">
+                <input type="number" id="f" placeholder="Frecuencia (f) en Hz">
                 <button onclick="calculate('MAS', 'angulo_velocidad')">Calcular</button>
             `;
         }
